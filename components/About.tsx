@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion } from 'framer-motion';
+import React from 'react';
 export default function About() {
   return (
     <motion.div
@@ -19,9 +19,7 @@ export default function About() {
       </h3>
       <motion.img
         alt="My Image"
-        src={
-          "https://cdn-icons-png.flaticon.com/512/152/152760.png"
-        }
+        src={'https://cdn-icons-png.flaticon.com/512/152/152760.png'}
         initial={{
           x: -200,
           opacity: 0,
@@ -40,8 +38,8 @@ export default function About() {
       />
       <div className="space-y-10 px-0 md: py-10 ">
         <h4 className="text-4xl font-semibold">
-          Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]">little</span>{" "}
+          Here is a{' '}
+          <span className="underline decoration-[#F7AB0A]">little</span>{' '}
           background
         </h4>
         <p className="text-sm">

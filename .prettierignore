@@ -1,0 +1,12 @@
+#node modules
+node_modules
+.prettierrc
+.prettierignore
+.gitignore
+package-lock.json
+package.json
+next.config.*
+*.config.js
+tsconfig.js
+.eslintrc.json
+.next

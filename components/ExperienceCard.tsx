@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion } from 'framer-motion';
+import React from 'react';
 
 export default function ExperienceCard() {
   return (
@@ -21,7 +21,7 @@ export default function ExperienceCard() {
           once: true,
         }}
         src={
-          "https://media.licdn.com/dms/image/D4D03AQEq8Kxtd3_A4g/profile-displayphoto-shrink_800_800/0/1681907021561?e=2147483647&v=beta&t=Qgs3oyOOKCPPeguWU7c3UTWfcVykMGD4da_qKJ-JFKI"
+          'https://media.licdn.com/dms/image/D4D03AQEq8Kxtd3_A4g/profile-displayphoto-shrink_800_800/0/1681907021561?e=2147483647&v=beta&t=Qgs3oyOOKCPPeguWU7c3UTWfcVykMGD4da_qKJ-JFKI'
         }
       />
       <div className="px-0 md:px-10">
@@ -41,7 +41,9 @@ export default function ExperienceCard() {
             src="https://media.licdn.com/dms/image/D4D03AQEq8Kxtd3_A4g/profile-displayphoto-shrink_800_800/0/1681907021561?e=2147483647&v=beta&t=Qgs3oyOOKCPPeguWU7c3UTWfcVykMGD4da_qKJ-JFKI"
           />
         </div>
-        <p className="uppercase py-5 text-gray-300">Started work ... - Ended...</p>
+        <p className="uppercase py-5 text-gray-300">
+          Started work ... - Ended...
+        </p>
         <ul className="list-disc space-y-4 ml-5 text-lg">
           <li>Summary Points</li>
           <li>Summary Points</li>
