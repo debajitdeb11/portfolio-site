@@ -1,6 +1,15 @@
+import { urlFor } from '@/sanity/lib/client';
 import { motion } from 'framer-motion';
 import React from 'react';
-export default function About() {
+
+type Props = {
+  about: About[],
+}
+
+export default function About({ about }: Props) {
+
+  const { details, image } = about[0];
+
   return (
     <motion.div
       initial={{
@@ -19,7 +28,7 @@ export default function About() {
       </h3>
       <motion.img
         alt="My Image"
-        src={'https://cdn-icons-png.flaticon.com/512/152/152760.png'}
+        src={urlFor(image)}
         initial={{
           x: -200,
           opacity: 0,
@@ -43,9 +52,7 @@ export default function About() {
           background
         </h4>
         <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          ad officiis tenetur debitis, ex itaque dolores expedita nam in sint
-          vitae id, laudantium rerum tempore modi iste. Quisquam, numquam iure?
+          {details}
         </p>
       </div>
     </motion.div>

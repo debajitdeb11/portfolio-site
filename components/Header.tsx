@@ -1,12 +1,26 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 
-type Props = {};
+type Props = {
+  social: Social[],
+  info: Info[],
+};
 
-export default function Header({}: Props) {
+export default function Header({ social, info }: Props) {
+  function makeLink(source: string): string {
+    if (source.includes('@')) {
+      return `mailto:${source}`
+    } else {
+      return `tel:${source}`
+    }
+  }
+
+  
+
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-auto xl:items-center">
+    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-0 xl:items-center">
       <motion.section
         className={'flex flex-row items-center'}
         initial={{
@@ -23,21 +37,11 @@ export default function Header({}: Props) {
           duration: 1.0,
         }}
       >
-        <SocialIcon
-          url="https://www.linkedin.com/in/debajitdeb11"
+        {social.map((social) => (<SocialIcon key={social._id}
+          url={social.link}
           fgColor={'grey'}
           bgColor={'transparent'}
-        />
-        <SocialIcon
-          url="https://www.linkedin.com/in/debajitdeb11"
-          fgColor={'grey'}
-          bgColor={'transparent'}
-        />
-        <SocialIcon
-          url="https://www.linkedin.com/in/debajitdeb11"
-          fgColor={'grey'}
-          bgColor={'transparent'}
-        />
+        />))}
       </motion.section>
 
       <motion.section
@@ -61,10 +65,11 @@ export default function Header({}: Props) {
           network={'email'}
           fgColor={'gray'}
           bgColor={'transparent'}
+          url={makeLink(info[0].email)}
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get In Touch
-        </p>
+        <Link href={makeLink(info[0].phoneNumber)} className="uppercase text-gray-400">
+        {info[0].phoneNumber}
+        </Link>
       </motion.section>
     </header>
   );
