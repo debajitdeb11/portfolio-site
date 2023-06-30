@@ -7,21 +7,34 @@ import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import { GetStaticProps } from 'next';
-import { getAbout, getExperiences, getPageInfo, getProjects, getSkills, getSocialInfo } from '@/utils/service';
-
+import {
+  getAbout,
+  getExperiences,
+  getPageInfo,
+  getProjects,
+  getSkills,
+  getSocialInfo,
+} from '@/utils/service';
 
 type Props = {
-  info: Info[],
-  about: About[],
-  experience: Experience[],
-  social: Social[],
-  projects: Project[]
-  skills: Skill[],
-}
+  info: Info[];
+  about: About[];
+  experience: Experience[];
+  social: Social[];
+  projects: Project[];
+  skills: Skill[];
+};
 
-export default function Home({info, about, social, experience, projects, skills}: Props) {
+export default function Home({
+  info,
+  about,
+  social,
+  experience,
+  projects,
+  skills,
+}: Props) {
   console.log('Skill => ', skills);
-  
+
   return (
     <div className="bg-[rgb(36,36,36)] overflow-x-hidden text-white h-screen snap-y snap-mandatory z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-amber-400/80">
       <Head>
@@ -52,15 +65,13 @@ export default function Home({info, about, social, experience, projects, skills}
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async() => {
-  const [ 
-    info, about, social, experience, projects, skills
-  ] = await Promise.all(
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const [info, about, social, experience, projects, skills] = await Promise.all(
     [
       getPageInfo(),
-      getAbout(), 
-      getSocialInfo(), 
-      getExperiences(), 
+      getAbout(),
+      getSocialInfo(),
+      getExperiences(),
       getProjects(),
       getSkills(),
     ]
@@ -77,4 +88,4 @@ export const getStaticProps: GetStaticProps<Props> = async() => {
     },
     revalidate: 3600,
   };
-}
+};

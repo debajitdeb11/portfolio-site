@@ -1,6 +1,6 @@
-import { defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-const regexForPhoneNumber = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$";
+const regexForPhoneNumber = '^(+d{1,2}s)?(?d{3})?[s.-]d{3}[s.-]d{4}$';
 
 export default defineType({
   name: 'pageInfo',
@@ -18,40 +18,42 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: "backgroundInfo",
+      name: 'backgroundInfo',
       title: 'Background Info',
-      description: "Enter a little about background",
-      type: "string",
+      description: 'Enter a little about background',
+      type: 'string',
     }),
     defineField({
-      name: "profilePicture",
-      title: "Profile Picture",
-      type: "image",
+      name: 'profilePicture',
+      title: 'Profile Picture',
+      type: 'image',
       options: {
         hotspot: true,
-      }
+      },
     }),
     defineField({
-      name: "phoneNumber",
-      title: "Phone Number",
-      type: "string",
+      name: 'phoneNumber',
+      title: 'Phone Number',
+      type: 'string',
     }),
     defineField({
-      name: "email",
-      title: "Email",
-      type: "email",
+      name: 'email',
+      title: 'Email',
+      type: 'email',
       validation: (text) => text.error('Please Enter a valid email!'),
     }),
     defineField({
-      name: "social",
-      title: "Social",
-      type: "array",
-      of: [{
-        type: "reference",
-        to: {
-          type: "social"
-        }
-      }]
-    })
+      name: 'social',
+      title: 'Social',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'social',
+          },
+        },
+      ],
+    }),
   ],
-})
+});

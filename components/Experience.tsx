@@ -3,8 +3,8 @@ import React from 'react';
 import ExperienceCard from './ExperienceCard';
 
 type Props = {
-  experience: Experience[],
-}
+  experience: Experience[];
+};
 
 export default function Experience({ experience }: Props) {
   return (
@@ -24,9 +24,9 @@ export default function Experience({ experience }: Props) {
         Experience
       </h3>
       <div className="w-full flex justify-center space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin  scrollbar-track-gray-400/20 scrollbar-thumb-amber-400/80">
-        {
-          experience.map((exp) => <ExperienceCard {...exp} key={exp._id} />)
-        }
+        {experience.map((exp) => (
+          <ExperienceCard {...exp} key={exp._id} />
+        ))}
         {/* <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard /> */}

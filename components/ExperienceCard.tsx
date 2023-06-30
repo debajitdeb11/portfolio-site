@@ -3,9 +3,15 @@ import { motion } from 'framer-motion';
 import moment from 'moment';
 import React from 'react';
 
-
-
-export default function ExperienceCard({ avatar, highlights, present, startDate, endDate, companyName, role }: Experience) {
+export default function ExperienceCard({
+  avatar,
+  highlights,
+  present,
+  startDate,
+  endDate,
+  companyName,
+  role,
+}: Experience) {
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-[#292929]">
       <motion.img
@@ -24,9 +30,7 @@ export default function ExperienceCard({ avatar, highlights, present, startDate,
         viewport={{
           once: true,
         }}
-        src={
-          urlFor(avatar)
-        }
+        src={urlFor(avatar)}
       />
       <div className="px-0 md:px-10">
         <h4 className="text-4xl font-light">{companyName}</h4>
@@ -46,11 +50,14 @@ export default function ExperienceCard({ avatar, highlights, present, startDate,
           />
         </div> */}
         <p className="uppercase py-5 text-gray-300">
-          {moment(startDate).format('MM/YYYY')} - {present ? 'PRESENT' : moment(endDate).format('MM/YYYY')}
+          {moment(startDate).format('MM/YYYY')} -{' '}
+          {present ? 'PRESENT' : moment(endDate).format('MM/YYYY')}
         </p>
         <ul className="list-disc space-y-1 ml-5 text-lg">
-          {highlights.map((highlight, idx) => <li key={idx}>{highlight}</li>)}
-          
+          {highlights.map((highlight, idx) => (
+            <li key={idx}>{highlight}</li>
+          ))}
+
           {/* <li>Summary Points</li>
           <li>Summary Points</li>
           <li>Summary Points</li>

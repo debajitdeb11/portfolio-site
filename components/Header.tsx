@@ -4,20 +4,18 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 
 type Props = {
-  social: Social[],
-  info: Info[],
+  social: Social[];
+  info: Info[];
 };
 
 export default function Header({ social, info }: Props) {
   function makeLink(source: string): string {
     if (source.includes('@')) {
-      return `mailto:${source}`
+      return `mailto:${source}`;
     } else {
-      return `tel:${source}`
+      return `tel:${source}`;
     }
   }
-
-  
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-0 xl:items-center">
@@ -37,11 +35,14 @@ export default function Header({ social, info }: Props) {
           duration: 1.0,
         }}
       >
-        {social.map((social) => (<SocialIcon key={social._id}
-          url={social.link}
-          fgColor={'grey'}
-          bgColor={'transparent'}
-        />))}
+        {social.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.link}
+            fgColor={'grey'}
+            bgColor={'transparent'}
+          />
+        ))}
       </motion.section>
 
       <motion.section
@@ -67,8 +68,11 @@ export default function Header({ social, info }: Props) {
           bgColor={'transparent'}
           url={makeLink(info[0].email)}
         />
-        <Link href={makeLink(info[0].phoneNumber)} className="uppercase text-gray-400">
-        {info[0].phoneNumber}
+        <Link
+          href={makeLink(info[0].phoneNumber)}
+          className="uppercase text-gray-400"
+        >
+          {info[0].phoneNumber}
         </Link>
       </motion.section>
     </header>

@@ -3,11 +3,10 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 type Props = {
-  about: About[],
-}
+  about: About[];
+};
 
 export default function About({ about }: Props) {
-
   const { details, image } = about[0];
 
   return (
@@ -51,9 +50,7 @@ export default function About({ about }: Props) {
           <span className="underline decoration-[#F7AB0A]">little</span>{' '}
           background
         </h4>
-        <p className="text-sm">
-          {details}
-        </p>
+        <p className="text-sm">{details}</p>
       </div>
     </motion.div>
   );

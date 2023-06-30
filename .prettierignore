@@ -10,3 +10,5 @@ next.config.*
 tsconfig.js
 .eslintrc.json
 .next
+.sanity
+dist

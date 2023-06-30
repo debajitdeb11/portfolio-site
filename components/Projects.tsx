@@ -5,8 +5,8 @@ import Link from 'next/link';
 import React from 'react';
 
 type Props = {
-  projects: Project[],
-}
+  projects: Project[];
+};
 
 export default function Projects({ projects }: Props) {
   return (
@@ -44,11 +44,15 @@ export default function Projects({ projects }: Props) {
               }}
               className="flex flex-col space-y-5 w-auto xl:w-1/2"
             >
-              <Link className="text-center" href={project?.liveLink ? project?.liveLink : '#' } target={'_blank'}>
-              <h4>{project?.name}</h4>
+              <Link
+                className="text-center"
+                href={project?.liveLink ? project?.liveLink : '#'}
+                target={'_blank'}
+              >
+                <h4>{project?.name}</h4>
               </Link>
               <p>
-                {project?.description} {' '}
+                {project?.description}{' '}
                 <span className="text-gray-500 underline italic">
                   <Link target={'_blank'} href={project?.link}>
                     Learn more

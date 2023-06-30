@@ -5,18 +5,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { urlFor } from '@/sanity/lib/client';
 type Props = {
-  info: Info[],
+  info: Info[];
 };
 
-export default function Hero({info}: Props) {
+export default function Hero({ info }: Props) {
   const { role, name, backgroundInfo, profilePicture } = info[0];
 
   const [text, count] = useTypewriter({
-    words: [
-      name,
-      backgroundInfo,
-      '<Error />',
-    ],
+    words: [name, backgroundInfo, '<Error />'],
     loop: true,
     delaySpeed: 2000,
   });
