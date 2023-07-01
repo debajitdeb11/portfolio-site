@@ -36,3 +36,9 @@ next-env.d.ts
 
 #dist
 /dist
+
+#vercel
+/.vercel/
+
+#sanity
+/.sanity/

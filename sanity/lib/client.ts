@@ -8,10 +8,8 @@ export const client = createClient({
   dataset,
   projectId,
   useCdn,
-  'studioUrl': baseUrl
+  studioUrl: baseUrl,
 });
-
-
 
 const builder = ImageUrlBuilder(client);
 

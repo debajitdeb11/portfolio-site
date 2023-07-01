@@ -12,3 +12,4 @@ tsconfig.js
 .next
 .sanity
 dist
+.vercel
