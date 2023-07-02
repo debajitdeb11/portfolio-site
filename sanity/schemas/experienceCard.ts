@@ -26,7 +26,7 @@ export default defineType({
     defineField({
       name: 'companyLocation',
       title: 'Company Location',
-      description: 'Company\'s Location (CITY, COUNTRY)',
+      description: "Company's Location (CITY, COUNTRY)",
       type: 'string',
       validation: (text) => text.required(),
     }),

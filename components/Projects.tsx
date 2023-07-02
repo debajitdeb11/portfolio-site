@@ -49,7 +49,7 @@ export default function Projects({ projects }: Props) {
                 href={project?.liveLink ? project?.liveLink : '#'}
                 target={'_blank'}
               >
-                <h4 className='underline'>{project?.name}</h4>
+                <h4 className="underline">{project?.name}</h4>
               </Link>
               <p>
                 {project?.description}{' '}

@@ -38,9 +38,16 @@ export default function Home({
       <Head>
         <title>Debajit Deb</title>
         <meta charSet="UTF-8" />
-        <meta name="description" content="Welcome to my Personal Website" key="desc"/>
-        <meta name="keywords" content="Debajit, Debajit Deb, Portfolio, Website"/>
-        <meta name="author" content="Debajit Deb"/>
+        <meta
+          name="description"
+          content="Welcome to my Personal Website"
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="Debajit, Debajit Deb, Portfolio, Website"
+        />
+        <meta name="author" content="Debajit Deb" />
       </Head>
       <Header social={social} info={info} />
 

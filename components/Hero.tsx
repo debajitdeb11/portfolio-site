@@ -31,10 +31,12 @@ export default function Hero({ info }: Props) {
         <h2 className="uppercase text-sm text-gray-500 pb-2 tracking-[15px]">
           {name}
         </h2>
-        {heroSildeContent.length > 0 && <h1 className="text-5xl lg:text-6xl font-semibold px-10">
-          <span className="mr-3">{text}</span>
-          <Cursor cursorColor={'yellow'} />
-        </h1>}
+        {heroSildeContent.length > 0 && (
+          <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+            <span className="mr-3">{text}</span>
+            <Cursor cursorColor={'yellow'} />
+          </h1>
+        )}
 
         <div className="pt-3">
           <Link href="#about">
@@ -49,7 +51,7 @@ export default function Hero({ info }: Props) {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
-          <a href={'../assets/resume/Debajit-Resume-april.pdf'} download={true} >
+          <a href={'../assets/resume/Debajit-Resume-april.pdf'} download={true}>
             <button className="heroButton">Resume</button>
           </a>
         </div>

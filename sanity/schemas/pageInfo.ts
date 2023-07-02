@@ -20,8 +20,8 @@ export default defineType({
       of: [
         {
           type: 'string',
-        }
-      ]
+        },
+      ],
     }),
     defineField({
       name: 'profilePicture',

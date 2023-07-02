@@ -34,16 +34,16 @@ export default function ExperienceCard({
         src={urlFor(avatar)}
       />
       <div className="px-0">
-        <div className='text-center'>
-        <h4 className="text-2xl font-light text-gray-500">{companyName}</h4>
-        <p className="text-lg mt-1 text-gray-600">{role}</p>
-        <p className="text-md text-gray-600">{companyLocation}</p>
-        <p className="uppercase py-2 text-gray-400 text-sm">
-          {moment(startDate).format('MM/YYYY')} -{' '}
-          {present ? 'PRESENT' : moment(endDate).format('MM/YYYY')}
-        </p>
+        <div className="text-center">
+          <h4 className="text-2xl font-light text-gray-500">{companyName}</h4>
+          <p className="text-lg mt-1 text-gray-600">{role}</p>
+          <p className="text-md text-gray-600">{companyLocation}</p>
+          <p className="uppercase py-2 text-gray-400 text-sm">
+            {moment(startDate).format('MM/YYYY')} -{' '}
+            {present ? 'PRESENT' : moment(endDate).format('MM/YYYY')}
+          </p>
         </div>
-        
+
         <ul className="list-disc space-y-1 ml-5 text-sm text-gray-500/90">
           {highlights.map((highlight, idx) => (
             <li key={idx}>{highlight}</li>

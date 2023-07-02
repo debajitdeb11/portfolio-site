@@ -46,9 +46,8 @@ export default function About({ about }: Props) {
       />
       <div className="space-y-10 px-0 md: py-10 ">
         <h4 className="text-4xl font-semibold">
-          A {' '}
-          <span className="underline decoration-[#F7AB0A]">little</span>{' '}
-          bit about me!
+          A <span className="underline decoration-[#F7AB0A]">little</span> bit
+          about me!
         </h4>
         <p className="text-sm">{details}</p>
       </div>
