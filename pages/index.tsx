@@ -37,6 +37,10 @@ export default function Home({
     <div className="bg-[rgb(36,36,36)] overflow-x-hidden text-white h-screen snap-y snap-mandatory z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-amber-400/80">
       <Head>
         <title>Debajit Deb</title>
+        <meta charSet="UTF-8" />
+        <meta name="description" content="Welcome to my Personal Website" key="desc"/>
+        <meta name="keywords" content="Debajit, Debajit Deb, Portfolio, Website"/>
+        <meta name="author" content="Debajit Deb"/>
       </Head>
       <Header social={social} info={info} />
 
