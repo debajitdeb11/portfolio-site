@@ -37,10 +37,9 @@ interface Info extends SanityBody {
   profilePicture: imageObject;
   email: string;
   phoneNumber: string;
-  role: string;
   social: socialObject[];
   name: string;
-  backgroundInfo: string;
+  heroSildeContent: string[];
 }
 
 interface About extends SanityBody {
@@ -63,6 +62,7 @@ interface Experience extends SanityBody {
   highlights: string[];
   role: string;
   avatar: iconObject;
+  companyLocation: string;
 }
 
 interface Project extends SanityBody {

@@ -13,12 +13,12 @@ export const projectId = assertValue(
 
 export const baseUrl = assertValue(
   isDevelopmentEnv()
-    ? 'https://portfolio-site-debajit.sanity.studio'
+    ? 'https://localhost:3000'
     : 'https://portfolio-site-debajit.sanity.studio',
   'Missing environment variable: BASE_URL_PATH'
 );
 
-export const useCdn: boolean = isDevelopmentEnv() ? false : true;
+export const useCdn: boolean = false;
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
   if (v === undefined) {

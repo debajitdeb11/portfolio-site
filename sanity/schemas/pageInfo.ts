@@ -13,15 +13,15 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'role',
-      title: 'Role',
-      type: 'string',
-    }),
-    defineField({
-      name: 'backgroundInfo',
-      title: 'Background Info',
-      description: 'Enter a little about background',
-      type: 'string',
+      name: 'heroSildeContent',
+      title: 'Hero Slide Content',
+      type: 'array',
+      description: 'Content you want to display in slide',
+      of: [
+        {
+          type: 'string',
+        }
+      ]
     }),
     defineField({
       name: 'profilePicture',

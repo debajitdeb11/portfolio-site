@@ -9,12 +9,12 @@ type Props = {
 };
 
 export default function Hero({ info }: Props) {
-  const { role, name, backgroundInfo, profilePicture } = info[0];
+  const { name, profilePicture, heroSildeContent = [] } = info[0];
 
   const [text, count] = useTypewriter({
-    words: [name, backgroundInfo, '<Error />'],
+    words: [...heroSildeContent],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 2500,
   });
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
@@ -29,12 +29,12 @@ export default function Hero({ info }: Props) {
       />
       <div className="z-20">
         <h2 className="uppercase text-sm text-gray-500 pb-2 tracking-[15px]">
-          {role}
+          {name}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        {heroSildeContent.length > 0 && <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor={'yellow'} />
-        </h1>
+        </h1>}
 
         <div className="pt-3">
           <Link href="#about">
@@ -49,6 +49,9 @@ export default function Hero({ info }: Props) {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
+          <a href={'../assets/resume/Debajit-Resume-april.pdf'} download={true} >
+            <button className="heroButton">Resume</button>
+          </a>
         </div>
       </div>
     </div>

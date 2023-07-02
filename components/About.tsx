@@ -42,13 +42,13 @@ export default function About({ about }: Props) {
         viewport={{
           once: true,
         }}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] p-10"
+        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[400px] xl:h-[500px] p-10"
       />
       <div className="space-y-10 px-0 md: py-10 ">
         <h4 className="text-4xl font-semibold">
-          Here is a{' '}
+          A {' '}
           <span className="underline decoration-[#F7AB0A]">little</span>{' '}
-          background
+          bit about me!
         </h4>
         <p className="text-sm">{details}</p>
       </div>
