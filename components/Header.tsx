@@ -18,7 +18,7 @@ export default function Header({ social, info }: Props) {
   }
 
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-0 xl:items-center">
+    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-50 xl:items-center">
       <motion.section
         className={'flex flex-row items-center'}
         initial={{
