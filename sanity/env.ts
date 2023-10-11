@@ -18,7 +18,7 @@ export const baseUrl = assertValue(
   'Missing environment variable: BASE_URL_PATH'
 );
 
-export const useCdn: boolean = false;
+export const useCdn: boolean = true;
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
   if (v === undefined) {
